@@ -1,10 +1,14 @@
-# [PROJECT NAME]
+# Structure-from-Motion Imagery Validation with File System Tools
 
 ## Overview
+This tool gathers file system statistics on structure-from-motion imagery. It can pull an island and site list based on location of the imagery (.jpg) as well as pool the number of files an folder size of each site.
+These csv files can be used for quality control of directory structure, and also be importd into the Optical App for database validation.
 
 ## Prerequisites
+Python
 
 ## Installing
+Deploy using Python
 
 ## Resources
 
