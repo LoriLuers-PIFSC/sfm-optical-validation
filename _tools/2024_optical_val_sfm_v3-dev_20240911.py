@@ -151,8 +151,9 @@ def process_island_site(island, pathvalue1, year_str, queue):
 
 
 # Function to generate fixed site list
-def generate_site_list_fixed(pathvalue1, output_sitelist_path_fixed, year=None):
+def generate_site_list_fixed(pathvalue1, output_sitelist_path_fixed,year=None):
     print('--- Fixed Site: Island and site list CSV for specified year started ----')
+
     year_str = str(year) if year else None
 
     islands = []
@@ -218,7 +219,7 @@ def process_island_year(island, pathvalue1, year_str, queue):
         print(f"Error processing island {island}: {e}")
 
 # Function to generate fixed file count
-def generate_file_count_fixed(pathvalue1, output_file_count_fixed_path, year=None):
+def generate_file_count_fixed(pathvalue1, output_file_count_fixed_path,year=None):
     year_str = str(year) if year else None
     print('--- Fixed Site: File count and size for specified year started ----')
 
@@ -230,8 +231,9 @@ def generate_file_count_fixed(pathvalue1, output_file_count_fixed_path, year=Non
     try:
         for island in os.listdir(pathvalue1):
             island_path = os.path.join(pathvalue1, island)
+            print(f"Checking island path: {island_path}")
+
             if os.path.isdir(island_path):
-                print(f"Processing island: {island}")
                 thread = threading.Thread(target=process_island_year, args=(island, pathvalue1, year_str, queue))
                 thread.start()
                 threads.append(thread)
@@ -274,7 +276,7 @@ def parse_args():
     parser.add_argument('SfM_Folder', widget='DirChooser')
     parser.add_argument('--generate-site-list', action='store_true', help='2. Generate site list CSV file')
     parser.add_argument('--generate-file-count', action='store_true', help='3. Generate imagery count and size CSV file')
-    parser.add_argument('--year', type=int, required=True, help='Enter the four-digit year for fixed sites (e.g., 2024)')
+    parser.add_argument('--year', type=int, help='Enter the four-digit year for fixed sites (e.g., 2024)')
     parser.add_argument('--generate-site-list-fixed', action='store_true', help='4. Generate FIXED site list CSV file')
     parser.add_argument('--generate-file-count-fixed', action='store_true', help='5. Generate FIXED imagery count and size CSV file')
 
@@ -319,7 +321,6 @@ def main():
     current_datetime = datetime.now().strftime("%m_%d_%Y_%H%M")
 
 
-    site_list_file_info_header = ['ISLAND', 'SITE']
     output_sitelist_path = os.path.join(path, f'{base_dir_name}_island_site_info_{current_datetime}.csv')
     output_sitelist_path_fixed = os.path.join(path, f'{base_dir_name}_{year}_fixed_site_info_{current_datetime}.csv')
 
@@ -329,7 +330,9 @@ def main():
 
     file_qcc_log_filename = base_dir_name + "_SfM_File_count_" + current_datetime + ".csv"
     file_qcc_log_filename_path = os.path.join(path, file_qcc_log_filename)
-    output_file_count_fixed_path =  base_dir_name + "_SfM_File_count_" + current_datetime + ".csv"
+    output_file_count_fixed =  base_dir_name + "_SfM_File_count_fixed" + current_datetime + ".csv"
+    output_file_count_fixed_path =  os.path.join(path,output_file_count_fixed)
+
 
     if generate_file_count_flag:
         generate_file_count(path, final_datas, file_qcc_log_filename_path, exclude_list,file_count_header)
@@ -341,7 +344,7 @@ def main():
         generate_site_list_fixed(path,output_sitelist_path_fixed,year)
 
     if generate_file_count_flag_fixed:
-        generate_file_count_fixed(path, output_sitelist_path_fixed, year)
+        generate_file_count_fixed(path, output_file_count_fixed_path, year)
 
 if __name__ == '__main__':
     main()
