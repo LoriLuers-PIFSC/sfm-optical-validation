@@ -14,7 +14,7 @@ Deploy using Python
 - Git
 
 ## Resources
-- Refer to How-To document for more details on specific functions
+- Refer to <a href = "https://github.com/noaa-pifsc/sfm-optical-validation/blob/main/How-to.md">How-To.md</a> for more details on specific functions
 
 ## Contact
 Developer: Lori Luers
