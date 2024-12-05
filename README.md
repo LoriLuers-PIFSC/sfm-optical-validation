@@ -15,6 +15,13 @@ Deploy using Python
 ## Version Control Platform
 - Git
 
+## Contact
+Developer: Lori Luers
+<br>
+Email: lori.luers@noaa.gov
+<br>
+GitHub: LoriLuers-PIFSC
+
 ## License
 See the [LICENSE.md](./LICENSE.md) for details
 
