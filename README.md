@@ -14,7 +14,7 @@ Deploy using Python
 - Git
 
 ## Resources
-- Follow this SOP on usage: https://docs.google.com/document/d/1EjGb59VSDDTmjM0eBs9oac9C6XzcdP6Awswt52F4_Lk/edit?usp=sharing
+- Refer to How-To document for more details on specific functions
 
 ## Contact
 Developer: Lori Luers
