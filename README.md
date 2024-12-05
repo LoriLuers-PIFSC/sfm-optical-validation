@@ -5,15 +5,16 @@ This tool gathers file system statistics on structure-from-motion imagery. It ca
 These csv files can be used for quality control of directory structure, and also be imported into the Optical App for database validation.
 
 ## Prerequisites
-Python
+- Python
 
 ## Installing
 Deploy using Python
 
-## Resources
-
 ## Version Control Platform
 - Git
+
+## Resources
+- Follow this SOP on usage: https://docs.google.com/document/d/1EjGb59VSDDTmjM0eBs9oac9C6XzcdP6Awswt52F4_Lk/edit?usp=sharing
 
 ## Contact
 Developer: Lori Luers
