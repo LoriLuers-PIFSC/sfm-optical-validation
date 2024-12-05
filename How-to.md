@@ -1,4 +1,5 @@
-# For full SOP with screenshots: https://docs.google.com/document/d/1EjGb59VSDDTmjM0eBs9oac9C6XzcdP6Awswt52F4_Lk/edit?usp=sharing
+# SOP with screenshots
+- https://docs.google.com/document/d/1EjGb59VSDDTmjM0eBs9oac9C6XzcdP6Awswt52F4_Lk/edit?usp=sharing
 
 ## Background
 - Our shift to collecting imagery for data collection prompts developing tools to optimize quality control of our imagery and integration with the database.
