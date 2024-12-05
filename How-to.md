@@ -20,7 +20,7 @@
 - Excludes folders without images, ‘MISC’, and ‘Products’
 - Using virtual machine at PIFSC : ~500 GB in ~6 minutes for 9 fixed sites
 - Can also be used to save diver time entering number of images and folder size into the database
-- 
+  
 ## Validation with the Database
 - Load into the Optical App ‘Optical Validation Module’ to see what imagery has yet to be sorted, or imagery that exists but is not flagged in the database for SfM activity.
 - The database carries site visit information including the date, time, site name, and the activity (photomosaic/SfM)
