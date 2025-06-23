@@ -8,7 +8,15 @@ These csv files can be used for quality control of directory structure, and also
 - Python
 
 ## Installing
-Deploy using Python
+1. Download file to local directory
+2. Deploy python or Anaconda
+3. In command prompt navigate to the directory where it is downloaded
+
+```
+python 2024_optical_val_sfm_v3.py
+```
+4. Select directory of missioncode if random sites, or of region of fixed sites
+5. Validate file system stats against database by loading file count info file into the Optical App
 
 ## Version Control Platform
 - Git
