@@ -283,7 +283,7 @@ def parse_args():
                 'version': '1.1',
                 'copyright': '2024',
                 'website': '',
-                'developer': 'Michael Akridge/Lori Luers'}]}])
+                'developer': 'Lori Luers'}]}])
 
 # Main function
 def main():
