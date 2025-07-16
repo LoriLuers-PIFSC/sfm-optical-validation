@@ -242,7 +242,7 @@ def generate_file_count_fixed(pathvalue1, output_file_count_fixed_path,year=None
                 'ISLAND': islands,
                 'SITE': sites,
                 'FILE_COUNT': file_counts,
-                'TOTAL_SIZE_GB': sizes,
+                'FOLDER_SIZE_GB': sizes,
                 'DIRECTORY_PATH': directories
             })
             df.to_csv(output_file_count_fixed_path, index=False)
